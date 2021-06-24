@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--RESPONSIVES AND UTF CHARACTER
+    ---------------------------------------------------------------- -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--DESCRIPTION
+    ---------------------------------------------------------------- -->
+    <meta name="description" content="Nigelrex" />
+    <!--EMBEDS
+    ---------------------------------------------------------------- -->
+    <meta property="og:title" content="Nigelrex" />
+    <meta property="og:description" content="Nigelrex!" />
+    <!--STYLE SHEET(CSS) AND FONTS FROM GOOGLE
+    ---------------------------------------------------------------- -->
+    <link href="../css/index.css" rel="stylesheet" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!--TITLE AND ICON
+    ---------------------------------------------------------------- -->
+    <title>Nigelrex - Bots</title>
+    <link rel="icon" href="../assets/images/Nigelrex.ico" />
+    <!--STYLE
+    ---------------------------------------------------------------- -->
+  </head>
+  <body>
+    <button onclick="snackbar()" class="snackbarimg  nosel">
+      <img src="../assets/images/Nigelrex - Bots.png" class="nosel"/>
+    </button>
+    <div id="snackbar">Hello!</div>
+    <header class="header btn-group">
+      <div class="flex fixed">
+        <a href="../../index.html"><button class="button">Home</button></a>
+        <a href="./about.html"><button class="button">About</button></a>
+        <a href="./portfolio.html"><button class="button">Portfolio</button></a>
+        <a href="./products.html"><button class="button">Products</button></a>
+      </div>
+    </header>
+
+    <script>
+      function snackbar() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

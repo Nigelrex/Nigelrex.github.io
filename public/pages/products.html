@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--RESPONSIVES AND UTF CHARACTER
+    ---------------------------------------------------------------- -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <!--DESCRIPTION
+    ---------------------------------------------------------------- -->
+    <meta name="description" content="Nigelrex" />
+    <!--EMBEDS
+    ---------------------------------------------------------------- -->
+    <meta property="og:title" content="Nigelrex" />
+    <meta property="og:description" content="Nigelrex!" />
+    <!--STYLE SHEET(CSS) AND FONTS FROM GOOGLE
+    ---------------------------------------------------------------- -->
+    <link href="../css/index.css" rel="stylesheet" />
+    <!-- <link rel = "preconnect" href = "https://fonts.gstatic.com" />
+    <link
+      href = "https://fonts.googleapis.com/css2?family = Dosis:wght@500&display = swap"
+      rel = "stylesheet"
+    /> -->
+    <!--TITLE AND ICON
+    ---------------------------------------------------------------- -->
+    <title>Nigelrex - Products</title>
+    <link rel="icon" href="../assets/images/Nigelrex.ico" />
+    <!--JS
+    ---------------------------------------------------------------- -->
+    <script src="../js/index.js"></script>
+  </head>
+  <body>
+    <button onclick="snackbar()" class="snackbarimg nosel">
+      <img src="../assets/images/Nigelrex - Products.png" class="nosel"/>
+    </button>
+    <div id="snackbar">Hello!</div>
+    <header class="header btn-group">
+      <div class="flex fixed">
+        <a href="../../index.html"><button class="button">Home</button></a>
+        <a href="./about.html"><button class="button">About</button></a>
+        <a href="./portfolio.html"><button class="button">Portfolio</button></a>
+        <a href="./blog.html"
+          ><button class="button">Blog</button></a
+        >
+        <a href="./bots.html"><button class="button">Bots</button></a>
+      </div>
+    </header>
+    <div>
+      <h1>Ready to Download stuff?</h1>
+    </div>
+    <div>
+      <h2>Maths Symbol Tool</h2>
+      <a
+        href="../products/AHK products/Maths Symbol Tool.exe"
+        download="Maths-Symbol-Tool.exe"
+        ><button class="button">Maths Symbol Tool - Download</button></a
+      >
+    </div>
+    <div class="center">
+      <p>
+        This is an easy and simple to use program outside of Microsoft Office
+        Word.<br />All you need to do is type <code>msquareroot</code> and press
+        space to see that your msquareroot has changed to this <code>√</code>
+      </p>
+      <h4>Cheat sheet</h4>
+      <p class="pre left nosel code">
+        msquareroot = √; mpi = π; m2square = ²; m3cube = ³; mtherefore = ∵;
+        mthereforeup = ∴; mtriangle = Δ; minfinite = ∞; mrightarrow = →;
+        mleftarrow = ←; mperpendicular = ⊥; mcongruent = ≅; mnotequalto = ≠;
+        mdegree = °; mangle = ∠; mcuberoot = ∛; mlessthanorequalto = ≤;
+        mgreaterthanorequalto = ≥; mparallell = ║; mnotparallell = ∦;
+        mplusorminus = ±; mupdown = ⇵; malpha = α; mbeta = β; mgamma = ɣ;
+        mselection = §; mparagraph = ¶; mohms = Ω; mnarysummation = ∑;
+        mmicrosign = µ; ms1 = ₁; ms2 = ₂; ms3 = ₃; ms4 = ₄; ms5 = ₅; ms6 = ₆;
+        ms7 = ₇; ms8 = ₈; ms9 = ₉; ms0 = ₀; ms+ = ₊; ms- = ₋; ms( = ₍; ms) = ₎;
+        msa = ₐ; msx = ₓ; mss1 = ¹; mss2 = ²; mss3 = ³; mss4 = ⁴;<br />mss5 = ⁵;
+        mss6 = ⁶; mss7 = ⁷; mss8 = ⁸; mss9 = ⁹; mss0 = ⁰; mss+ = ⁺; mss- = ⁻;
+        mss( = ⁽; mss) = ⁾; mssa = ᵃ; mssb = ᵇ; mssn = ⁿ;<br />mssx = ˣ; F12 =
+        To close the App
+      </p>
+    </div>
+    <script>
+      function snackbar() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

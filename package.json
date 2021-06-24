@@ -1,0 +1,34 @@
+{
+  "name": "nigelrex_website",
+  "version": "1.0.0",
+  "description": "Nigelrex Website",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js",
+    "start": "nodemon -e css,html,js,json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nigelrex/Nigelrex.git"
+  },
+  "keywords": [
+    "Nigelrex",
+    "Website",
+    "Portfolio",
+    "Others"
+  ],
+  "author": "Nigelrex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nigelrex/Nigelrex/issues"
+  },
+  "homepage": "https://github.com/Nigelrex/Nigelrex#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "log-to-file": "^2.0.2",
+    "node-static": "^0.7.11",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}

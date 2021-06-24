@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--RESPONSIVES AND UTF CHARACTER
+    ---------------------------------------------------------------- -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--DESCRIPTION
+    ---------------------------------------------------------------- -->
+    <meta name="description" content="Nigelrex" />
+    <!--EMBEDS
+    ---------------------------------------------------------------- -->
+    <meta property="og:title" content="Nigelrex" />
+    <meta property="og:description" content="Nigelrex!" />
+    <!--STYLE SHEET(CSS) AND FONTS FROM GOOGLE
+    ---------------------------------------------------------------- -->
+    <link href="./public/css/index.css" rel="stylesheet" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!--TITLE AND ICON
+    ---------------------------------------------------------------- -->
+    <title>Nigelrex - Homepage</title>
+    <link rel="icon" href="./public/assets/images/Nigelrex.ico" />
+    <!--STYLE
+    ---------------------------------------------------------------- -->
+  </head>
+  <body>
+    <button onclick="snackbar()" class="snackbarimg">
+      <img src="./public/assets/images/Nigelrex - Homepage.png" />
+    </button>
+    <div id="snackbar">Hello!</div>
+    <header class="header">
+      <div class="flex fixed btn-group header">
+        <a href="./public/pages/about.html"
+          ><button class="button">About</button></a
+        >
+        <a href="./public/pages/portfolio.html"
+          ><button class="button">Portfolio</button></a
+        >
+        <a href="./public/pages/blog.html"
+          ><button class="button">Blog</button></a
+        >
+        <a href="./public/pages/products.html"
+          ><button class="button">Products</button></a
+        >
+
+        <a href="./public/pages/bots.html"
+          ><button class="button">Bots</button></a
+        >
+      </div>
+    </header>
+    <div class="left">
+      <h1>Youtube</h1>
+      <h3>Latest Video</h3>
+      <iframe
+        class="latestVideoEmbed"
+        vnum="0"
+        cid="UCc-pXjppgghkd_8XyDLbGhA"
+        width="450"
+        height="300"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script>
+        var reqURL =
+          "https://api.rss2json.com/v1/api.json?rss_url=" +
+          encodeURIComponent(
+            "https://www.youtube.com/feeds/videos.xml?channel_id="
+          );
+        function loadVideo(iframe) {
+          $.getJSON(reqURL + iframe.getAttribute("cid"), function (data) {
+            var videoNumber = iframe.getAttribute("vnum")
+              ? Number(iframe.getAttribute("vnum"))
+              : 0;
+            console.log(videoNumber);
+            var link = data.items[videoNumber].link;
+            id = link.substr(link.indexOf("=") + 1);
+            iframe.setAttribute(
+              "src",
+              "https://youtube.com/embed/" + id + "?controls=0&autoplay=0"
+            );
+          });
+        }
+        var iframes = document.getElementsByClassName("latestVideoEmbed");
+        for (var i = 0, len = iframes.length; i < len; i++) {
+          loadVideo(iframes[i]);
+        }
+      </script>
+      <div class="center">
+        <h1>Github</h1>
+        <p>
+          View my Github Page <a href="https://github.com/Nigelrex">here</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      function snackbar() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

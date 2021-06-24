@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--RESPONSIVES AND UTF CHARACTER
+        ---------------------------------------------------------------- -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--DESCRIPTION
+        ---------------------------------------------------------------- -->
+    <meta name="description" content="Nigelrex" />
+    <!--EMBEDS
+        ---------------------------------------------------------------- -->
+    <meta property="og:title" content="Nigelrex" />
+    <meta property="og:description" content="Nigelrex!" />
+    <!--STYLE SHEET(CSS) AND FONTS FROM GOOGLE
+        ---------------------------------------------------------------- -->
+    <link href="../css/index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!--TITLE AND ICON
+        ---------------------------------------------------------------- -->
+    <title>Nigelrex - Portfolio</title>
+    <link rel="icon" href="../assets/images/Nigelrex.ico" />
+    <!--STYLE
+        ---------------------------------------------------------------- -->
+  </head>
+  <body>
+    <button onclick="snackbar()" class="snackbarimg  nosel">
+      <img src="../assets/images/Nigelrex - Portfolio.png" class="nosel"/>
+    </button>
+    <div id="snackbar">Hello!</div>
+    <header class="fixed header btn-group">
+      <div class="flex fixed">
+        <a href="../../index.html"><button class="button">Home</button></a>
+        <a href="./about.html"><button class="button">About</button></a>
+        <a href="./blog.html"><button class="button">Blog</button></a>
+        <a href="./products.html"><button class="button">Products</button></a>
+        <a href="./bots.html"><button class="button">Bots</button></a>
+      </div>
+    </header>
+    <div class="center flex">
+      <h2>
+        Hello!, My self Nigelrex and I am a Enthusiastic person in making
+        Minecraft models and making discord bots and websites, here are some of
+        my work!
+      </h2>
+    </div>
+    <div class="left flex">
+      <h3>
+        My Work on
+        <a href="https://www.planetminecraft.com/member/nigelrex/"
+          >PlanetMinecraft</a
+        >
+      </h3>
+    </div>
+    <div class="right flex">
+      <h3>
+        My Work on
+        <a href="https://craftyourworld.github.io">CraftYourWorld</a>
+      </h3>
+    </div>
+    <div class="left flex">
+      <h3>
+        My Video(s) on
+        <a href="https://www.youtube.com/channel/UCc-pXjppgghkd_8XyDLbGhA"
+          >Youtube</a
+        >
+      </h3>
+    </div>
+    <div class="right flex">
+      <h3>
+        My Discord bots on
+        <a href="https://discord.bots.gg/profile/738032578820309072"
+          >Discord Bots</a
+        >
+      </h3>
+    </div>
+    <script>
+      function snackbar() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
